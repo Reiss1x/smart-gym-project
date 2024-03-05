@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Anta&display=swap");
+
+:root {
+  --dark-purple: #35374B;
+  --dark-green: #344955;
+  --lighter-green: #50727B;
+  --light-green: #78A083;
+  --font-family: "Anta", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
