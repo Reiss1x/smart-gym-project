@@ -1,0 +1,16 @@
+{
+    "imgs": [
+        {
+            "src": "https://i.imgur.com/ufZPbm6.png",
+            "alt": "Pesos livres"
+        },
+        {
+            "src": "https://i.imgur.com/53OZar6.png",
+            "alt": "Treino de Força"
+        },
+        {
+            "src": "https://i.imgur.com/VWLxOJK.png",
+            "alt": "Treino Cardiovascular"
+        }
+    ]
+}

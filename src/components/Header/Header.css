@@ -1,14 +1,22 @@
-#header {
+.header {
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 5.2vw;
   width: 95%;
   margin: auto;
 
 }
 
 #logo {
-  width: 10%;
+  width: 9.4vw;
+  height: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  
+}
+
+#header-buttons {
+  width: auto;
 }
 
 .h-buttons {
@@ -16,7 +24,7 @@
   font-size: 20px;
   display: inline-block; 
   cursor: pointer;
-  margin: 35px 20px; 
+  margin: 1.6vw 1vw; 
   color: #fff;
   background-color: transparent;
   text-decoration: none; 
@@ -38,3 +46,29 @@
 .h-buttons:hover {
   color: #a2a1a1;
 }
+
+
+@media (max-width: 425px) {
+  .h-buttons {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 426px) {
+  .h-buttons {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 769px) {
+  .h-buttons {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1445px) {
+  .h-buttons {
+    font-size: 25px;
+  }
+}
+

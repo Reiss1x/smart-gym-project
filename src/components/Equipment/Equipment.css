@@ -1,0 +1,47 @@
+.equipment-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 5.3vw;
+}
+
+.equipment-text {
+    font-family: var(--font-family);
+    color: white;
+    font-size: 3.7vw;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.e-buttons {
+    margin-right: 3em;
+    padding: 0.4em 3em;
+    border-radius: 60px;
+    color: white;
+    font-size: 1.5vw;
+    border: transparent;
+    background-color: var(--dark-green);
+}
+.e-buttons:last-child {
+    margin-right: 0;
+}
+
+.e-buttons:focus {
+    background-color: var(--light-green);
+}
+
+#equipment-below-text {
+    padding-top: 1.6vw;
+    font-family: Arial;
+    font-style: normal;
+    font-size: 1vw;
+}
+
+
+.slider-style {
+    height: 600px;
+    position: relative;
+    width: 1300px;
+}

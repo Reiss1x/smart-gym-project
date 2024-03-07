@@ -72,8 +72,8 @@
 }
 
 #arrows {
-  padding-top: 20px;
-  width: 70px;
+  padding-top: 1vw;
+  width: 3.6vw;
   margin: auto;
 }
 
@@ -88,4 +88,14 @@
 br {
   margin: 0;
   padding: 0;
+}
+
+
+@media (max-width: 1024px) {
+  #img-area {
+    padding-top: 10px;
+  }
+  #img-area-text {
+    padding-top: 10px;
+  }
 }

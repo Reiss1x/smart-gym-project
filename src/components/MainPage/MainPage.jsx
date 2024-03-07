@@ -2,6 +2,7 @@ import React from 'react'
 import curlingMan from '../../assets/curling-man.png'
 import arrows from '../../assets/double-arrow.png'
 import './MainPage.css'
+import Equipment from '../Equipment/Equipment'
 
 export default function MainPage() {
   return (

@@ -7,7 +7,7 @@ export default function Header() {
 
 
   return (
-    <div id='header'>
+    <div className='header'>
         <img src={smartGym} alt="Logo" id='logo'></img>
         <div id='header-buttons'>
           <button className='h-buttons'> Sobre </button>

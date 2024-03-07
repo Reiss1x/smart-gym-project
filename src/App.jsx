@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import Header from './components/Header/Header.jsx'
 import MainPage from './components/MainPage/MainPage.jsx'
+import Equipment from './components/Equipment/Equipment.jsx'
 import './App.css'
  
 function App() {
@@ -9,9 +10,10 @@ function App() {
 
   return (
     <>
-    <div id='container'>
+    <div className='container'>
       <Header />
-      <MainPage></MainPage>
+      <MainPage />
+      <Equipment />
     </div>
     </>
   )
