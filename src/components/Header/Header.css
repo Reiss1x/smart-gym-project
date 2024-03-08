@@ -54,19 +54,19 @@
   }
 }
 
-@media (max-width: 768px) and (min-width: 426px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .h-buttons {
     font-size: 11px;
   }
 }
 
-@media (max-width: 1440px) and (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 1440px){
   .h-buttons {
     font-size: 16px;
   }
 }
 
-@media (min-width: 1445px) {
+@media (min-width: 1441px) {
   .h-buttons {
     font-size: 25px;
   }

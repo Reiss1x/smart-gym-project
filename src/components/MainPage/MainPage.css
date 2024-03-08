@@ -9,6 +9,14 @@
   overflow: visible;
 }
 
+.arrow-button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  margin: auto;
+}
+
 #man {
 
   width: 100%;
@@ -76,16 +84,9 @@
   padding-bottom: 5.3vw;
   width: 3.6vw;
   margin: auto;
-  
+
 }
 
-.green {
-  color: var(--light-green);
-}
-
-.bold-text {
-  font-weight: bold;
-}
 
 br {
   margin: 0;

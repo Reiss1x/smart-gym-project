@@ -1,0 +1,27 @@
+.membership-container {
+    padding-bottom: 1em;
+    width: 70%;
+    margin: auto;
+}
+
+.membership-text {
+    font-family: var(--font-family);
+    color: white;
+    font-size: 3.7vw;
+}
+
+.membership-below-text {
+    padding-top: 1.6vw;
+    font-family: Arial;
+    font-style: normal;
+    font-size: 1vw;
+}
+
+.container-cards {
+  display: flex;
+  
+}
+
+.individual-cards {
+    width: calc(33.33% - 100px);
+}

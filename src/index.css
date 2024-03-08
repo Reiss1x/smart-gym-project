@@ -18,3 +18,11 @@
 html {
   scroll-behavior: smooth;
 }
+
+.green {
+  color: var(--light-green);
+}
+
+.bold-text {
+  font-weight: bold;
+}

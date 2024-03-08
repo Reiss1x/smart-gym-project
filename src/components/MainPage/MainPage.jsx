@@ -2,9 +2,17 @@ import React from 'react'
 import curlingMan from '../../assets/curling-man.png'
 import arrows from '../../assets/double-arrow.png'
 import './MainPage.css'
-import Equipment from '../Equipment/Equipment'
 
 export default function MainPage() {
+
+  const handleArrow = (section) => {
+    const element = document.getElementById(section);
+
+    element?.scrollIntoView({
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <>
         <div id='img-area'>
@@ -24,8 +32,11 @@ export default function MainPage() {
           </div>
         </div>
         <div id='arrow-container'>
-          <img id="arrows" src={arrows} alt="pointing arrows" />
-        </div>
+          <button className="arrow-button"onClick={() => handleArrow("equipment-area")}>
+            <img id="arrows" src={arrows} alt="pointing arrows" />
+          </button>
+            
+          </div>
     </>
   )
 }

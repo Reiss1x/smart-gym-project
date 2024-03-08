@@ -21,7 +21,7 @@ export default function Equipment() {
     }
     
   return (
-    <div className='equipment-area' id='equip-area'>
+    <div id='equipment-area'>
         <div className='equipment-text'>
             Nosso Equipamento<br />
             <div id='equipment-below-text'>

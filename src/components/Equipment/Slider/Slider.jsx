@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export default function Slider({slides, idx}) {
 
   const slideStyle = {
-    width: "69vw",
+    width: "70vw",
     height: "100%",
     backgroundPosition: "center",
     backgroundSize: "cover",

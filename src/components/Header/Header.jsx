@@ -19,7 +19,7 @@ export default function Header() {
         <img src={smartGym} alt="Logo" id='logo'></img>
         <div id='header-buttons'>
           <button className='h-buttons' > Sobre </button>
-          <button className='h-buttons' onClick={() => handleClick("equip-area")}> Equipamento </button>
+          <button className='h-buttons' onClick={() => handleClick("equipment-area")}> Equipamento </button>
           <button className='h-buttons'> Planos </button>
           <button className='h-buttons'> Treinadores </button>
           <button className='h-buttons'> Contato </button>
