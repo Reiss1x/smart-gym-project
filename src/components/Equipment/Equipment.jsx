@@ -1,20 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import slides from '../../assets/SlideData.json'
 import Slider from './Slider/Slider.jsx'
 import './Equipment.css'
 
 export default function Equipment() {
     const [idx, setIdx] = useState(0);
-
-    const buttons = {
-        free: useRef(null),
-        strength: useRef(null),
-        cardio: useRef(null),
-    }
-
-    useEffect(() => {
-        Object.values(buttons)[idx].current.focus();
-    }, [idx])
 
     const handleArrows = (event) => {
         if(event.target.id == 'L'){
@@ -26,42 +16,29 @@ export default function Equipment() {
         }
     }
 
-    const handleButtons = (event) => {
-        setIdx(event.target.id);
-        // switch (buttName){
-        //     case "free": setIdx(0); 
-        //     break;
-        //     case "strength": setIdx(1);
-        //     break;
-        //     case "cardio": setIdx(2);
-        //     break;
-        // }
-        // setButton(buttName)
+    const handleButtons = (number) => {
+        setIdx(number);
     }
     
   return (
-    <div className='equipment-area'>
+    <div className='equipment-area' id='equip-area'>
         <div className='equipment-text'>
             Nosso Equipamento<br />
             <div id='equipment-below-text'>
                 Equipamentos <span className='bold-text'>novos</span> e <span className='bold-text'>tecnológicos</span> para<br/>satisfazer suas necessidades
             </div>
             <div className='equipment-buttons'>
-                <button  id="0" className='e-buttons' onClick={handleButtons} ref={buttons.free}> Pesos livres </button>
-                <button id="1" className='e-buttons' onClick={handleButtons} ref={buttons.strength}> Treino de força </button>
-                <button id="2" className='e-buttons' onClick={handleButtons} ref={buttons.cardio}> Cardiovascular </button>
+                <button   className='e-buttons' onClick={() => handleButtons(0)}  style={{ backgroundColor: idx === 0 ? '#78A083' : '#344955' }}> Pesos livres </button>
+                <button className='e-buttons' onClick={() => handleButtons(1)}  style={{ backgroundColor: idx === 1 ? '#78A083' : '#344955' }}> Treino de força </button>
+                <button className='e-buttons' onClick={() => handleButtons(2)}  style={{ backgroundColor: idx === 2 ? '#78A083' : '#344955' }}> Cardiovascular </button>
             </div>
-            
         </div>
         
         <div className='slider-style'>
+            <button id='L'className='s-buttons' onClick={handleArrows}> &#8592; </button>
             <Slider slides={slides} idx={idx}/>
+            <button id='R'className='s-buttons' onClick={handleArrows}> &#8594; </button>
         </div>
-        <div className='slider-buttons'>
-            <button id='L'className='s-buttons' onClick={handleArrows}> &lt; </button>
-            <button id='R'className='s-buttons' onClick={handleArrows}> &gt; </button>
-        </div>
-
     </div>
   )
 }

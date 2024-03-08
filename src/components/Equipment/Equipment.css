@@ -4,7 +4,6 @@
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
-    padding-top: 5.3vw;
 }
 
 .equipment-text {
@@ -41,7 +40,23 @@
 
 
 .slider-style {
-    height: 600px;
-    position: relative;
-    width: 1300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 31vw;
+    width: 100%;
+}
+.s-buttons {
+    width: 5vw;
+    height: 5vw;
+    font-size: 2vw;
+    color: white;
+    border-radius: 50%; 
+    background-color: rgba(124, 124, 124, 0.3);
+    margin: 3vw;
+    border: 1px rgb(56, 56, 56) solid;
+}
+
+.s-buttons:active {
+    background-color: rgba(71, 71, 71, 0.3);
 }
