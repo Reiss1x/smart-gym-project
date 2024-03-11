@@ -28,7 +28,7 @@ export default function MainPage() {
           </div>
           <img src={curlingMan} alt="Venha conhecer nossa academia e nossos planos!" id='man' />
           <div id='img-area-button'>
-              <button id='planos'> Conheça nossos planos </button>
+              <button id='planos' onClick={() => handleArrow("membership-container")}> Conheça nossos planos </button>
           </div>
         </div>
         <div id='arrow-container'>

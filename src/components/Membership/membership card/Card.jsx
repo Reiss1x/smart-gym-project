@@ -14,7 +14,7 @@ export default function ({ data }) {
         <div className='card-specifications'>
               {data.specifications.map((element, index) => (
                     <div className="specifications" key={index}>
-                      <img style={{marginRight:"10px"}}src={checkMark}></img>
+                      <img id="checkmark" src={checkMark}></img>
                       {element} 
                     </div>
                 ))}

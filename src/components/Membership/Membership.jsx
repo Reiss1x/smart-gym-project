@@ -9,7 +9,7 @@ export default function Membership() {
     
     
     return (
-    <div className='membership-container'> 
+    <div id='membership-container'> 
         <div className='membership-text'>
             Planos <br />
             <div className='membership-below-text'>

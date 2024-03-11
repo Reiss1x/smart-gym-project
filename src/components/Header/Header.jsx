@@ -20,7 +20,7 @@ export default function Header() {
         <div id='header-buttons'>
           <button className='h-buttons' > Sobre </button>
           <button className='h-buttons' onClick={() => handleClick("equipment-area")}> Equipamento </button>
-          <button className='h-buttons'> Planos </button>
+          <button className='h-buttons' onClick={() => handleClick("membership-container")}> Planos </button>
           <button className='h-buttons'> Treinadores </button>
           <button className='h-buttons'> Contato </button>
         </div>
