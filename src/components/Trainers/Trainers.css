@@ -11,10 +11,71 @@
     display: flex;
     width: 80%;
     gap: 2.5vw;
-    justify-content: center
+    justify-content: center;
 }
 
-.trainers img {
-    flex: 1;
-    max-width: 30%;
+.trainer-img {
+    position: relative;
+    width: 30%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 12%, rgba(0,0,0,0.5970763305322129) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.trainer-img:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-content {
+    position: absolute;
+    color: white;
+    width: 100%; 
+    height: 100%;   
+}
+
+
+.trainer-img img {
+    width: 100%;
+}
+
+.trainer-quote {
+    border-left: 0.5vw solid var(--light-green);
+    width: 30%;
+    text-align: left;
+    font-family: var(--font-family);
+    padding: 0.3vw;
+    font-size: 0.9vw;
+    margin-top: 2.2vw;
+}
+
+.trainer-button {
+    padding: 0.8vw;
+    background-color: var(--light-green);
+    border: 0;
+    border-radius: 60px;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
+#phone {
+    width: 1.6vw;
+    margin-right: 0.5vw;
 }
