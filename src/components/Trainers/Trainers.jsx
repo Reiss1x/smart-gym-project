@@ -7,9 +7,8 @@ import Trainer from './TrainerComponent'
 
 export default function Trainers() {
   return (
-    <div className='trainers-container'>
+    <div id='trainers-container'>
         <h1>Nossos Treinadores</h1>
-
         <div className='trainers'>
             <Trainer 
                 img={Male} 

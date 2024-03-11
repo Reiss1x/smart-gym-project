@@ -1,5 +1,4 @@
 import React from 'react'
-import { useRef } from 'react';
 import "./Header.css"
 import smartGym from "../../assets/logo.svg";
 
@@ -21,7 +20,7 @@ export default function Header() {
           <button className='h-buttons' > Sobre </button>
           <button className='h-buttons' onClick={() => handleClick("equipment-area")}> Equipamento </button>
           <button className='h-buttons' onClick={() => handleClick("membership-container")}> Planos </button>
-          <button className='h-buttons'> Treinadores </button>
+          <button className='h-buttons' onClick={() => handleClick("trainers-container")}> Treinadores </button>
           <button className='h-buttons'> Contato </button>
         </div>
     </div>
