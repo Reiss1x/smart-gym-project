@@ -1,0 +1,34 @@
+#about-container {
+    padding-top: 5vw;
+}
+
+.about-text {
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+.about-icons-container {
+    padding-top: 5vw;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.icons-title {
+    font-size: 2vw;
+    font-family: var(--font-family);
+    padding-top: 0.5vw;
+}
+.icons-text {
+    padding-top: 1vw;
+    font-size: 0.9vw;
+    font-family: Arial;
+}
+
+.about-icons {
+    display: flex;
+    flex-direction: column;
+    width: 26%;
+}
+.about-icons img {
+    width: 5vw;
+}

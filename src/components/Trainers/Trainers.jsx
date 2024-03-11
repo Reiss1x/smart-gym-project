@@ -2,7 +2,7 @@ import React from 'react'
 import './Trainers.css'
 import Female from '../../assets/female_trainer.jpg'
 import Male from '../../assets/male_trainer.png'
-import Old from '../../assets/old_trainer.jpg'
+import Old from '../../assets/old_trainer.png'
 import Trainer from './TrainerComponent'
 
 export default function Trainers() {
