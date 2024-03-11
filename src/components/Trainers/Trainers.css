@@ -1,0 +1,20 @@
+.trainers-container {
+    width: 100%;
+    padding-top: 5vw;
+    margin: auto;
+    text-align: center;
+    background-color: #100D29;
+}
+.trainers {
+    padding-top: 2.5vw;
+    margin: auto;
+    display: flex;
+    width: 80%;
+    gap: 2.5vw;
+    justify-content: center
+}
+
+.trainers img {
+    flex: 1;
+    max-width: 30%;
+}
