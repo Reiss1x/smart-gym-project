@@ -23,9 +23,9 @@ export default function Equipment() {
   return (
     <div id='equipment-area'>
         <div className='equipment-text'>
-            Nosso Equipamento<br />
+            <h1>Nosso Equipamento</h1>
             <div id='equipment-below-text'>
-                Equipamentos <span className='bold-text'>novos</span> e <span className='bold-text'>tecnológicos</span> para<br/>satisfazer suas necessidades
+                <p>Equipamentos <span className='bold-text'>novos</span> e <span className='bold-text'>tecnológicos</span> para<br/>satisfazer suas necessidades</p>
             </div>
             <div className='equipment-buttons'>
                 <button   className='e-buttons' onClick={() => handleButtons(0)}  style={{ backgroundColor: idx === 0 ? '#78A083' : '#344955' }}> Pesos livres </button>

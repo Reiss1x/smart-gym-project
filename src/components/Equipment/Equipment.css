@@ -12,10 +12,10 @@
     color: white;
     font-size: 3.7vw;
     text-align: center;
-    padding-bottom: 0.7em;
 }
 
 .e-buttons {
+    margin-bottom: 2.5vw;
     margin-right: 3em;
     padding: 0.4em 3em;
     border-radius: 60px;
@@ -30,13 +30,6 @@
 
 .e-buttons:focus {
     background-color: var(--light-green);
-}
-
-#equipment-below-text {
-    padding-top: 1.6vw;
-    font-family: Arial;
-    font-style: normal;
-    font-size: 1vw;
 }
 
 .slider-style {

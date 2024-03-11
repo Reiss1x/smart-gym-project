@@ -17,16 +17,19 @@ export default function MainPage() {
     <>
         <div id='img-area'>
           <div id='img-area-text'>
-              Descubra o poder de um
+            <h1>Descubra o poder de um
               <br />
               <span className='green'> Corpo saudável</span> <br />
+            </h1>
+            <p>
+              Treine e maximize seu corpo para uma melhor
+              <br />
+              <span className='bold-text'>qualidade de vida </span> e aumento da <span className='bold-text'>confiança.</span>
+            </p> 
 
-              <div id='img-area-below-text'> Treine e maximize seu corpo para uma melhor
-                  <br />
-                  <span className='bold-text'>qualidade de vida </span> e aumento da <span className='bold-text'>confiança.</span>
-              </div>
           </div>
           <img src={curlingMan} alt="Venha conhecer nossa academia e nossos planos!" id='man' />
+          
           <div id='img-area-button'>
               <button id='planos' onClick={() => handleArrow("membership-container")}> Conheça nossos planos </button>
           </div>
@@ -35,8 +38,7 @@ export default function MainPage() {
           <button className="arrow-button"onClick={() => handleArrow("equipment-area")}>
             <img id="arrows" src={arrows} alt="pointing arrows" />
           </button>
-            
-          </div>
+        </div>
     </>
   )
 }
