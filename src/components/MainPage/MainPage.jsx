@@ -28,17 +28,18 @@ export default function MainPage() {
             </p> 
 
           </div>
-          <img src={curlingMan} alt="Venha conhecer nossa academia e nossos planos!" id='man' />
+            <img src={curlingMan} alt="Venha conhecer nossa academia e nossos planos!" id='man' />
           
-          <div id='img-area-button'>
+            <div id='img-area-button'>
               <button id='planos' onClick={() => handleArrow("membership-container")}> Conheça nossos planos </button>
-          </div>
-        </div>
-        <div id='arrow-container'>
-          <button className="arrow-button"onClick={() => handleArrow("equipment-area")}>
+            </div>
+            </div>
+            <div id='arrow-container'>
+            <button className="arrow-button"onClick={() => handleArrow("equipment-area")}>
             <img id="arrows" src={arrows} alt="pointing arrows" />
-          </button>
-        </div>
+            </button>
+          </div>
+          <div />
     </>
   )
 }

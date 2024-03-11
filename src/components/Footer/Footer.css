@@ -1,0 +1,50 @@
+#footer-container {    
+      background: rgb(16,13,41);
+background: linear-gradient(0deg, rgb(8, 6, 20) 75%, rgba(0,0,0,0) 100%); 
+}
+
+.footer {
+    width: 80%;
+    margin: auto;
+    padding-top: 10vw;
+    padding-bottom: 5vw;
+    display: flex;
+    position: relative
+}
+
+.footer h1 {
+    font-size: 2.5vw;
+    font-family: Arial;
+}
+
+.footer-links {
+    position: absolute;
+    right: 0;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    line-height: 30px;
+    gap: 5vw;
+    font-size: 1vw;
+    font-family: Arial;
+}
+.footer-links button {
+    background-color: transparent;
+    color: white;
+    border: 0;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.footer-links button:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+}
+a:hover {
+    text-decoration: underline;
+}
