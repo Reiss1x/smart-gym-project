@@ -35,7 +35,7 @@ export default function MainPage() {
             </div>
             </div>
             <div id='arrow-container'>
-            <button className="arrow-button"onClick={() => handleArrow("equipment-area")}>
+            <button className="arrow-button"onClick={() => handleArrow("equipment-container")}>
             <img id="arrows" src={arrows} alt="pointing arrows" />
             </button>
           </div>
