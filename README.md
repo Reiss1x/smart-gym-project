@@ -1,8 +1,18 @@
-# React + Vite
+# SmartGym UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Fictional gym ui design, made with ReactJS  
+WIP, will implement full website in the future
 
-Currently, two official plugins are available:
+## How to run
+You can run the project locally to check the responsiveness and button actions:  
+`https://github.com/Reiss1x/smart-gym-project.git` - clone this repository  
+`npm install` - install dependencies  
+`npm run dev` - run project   
+`http://localhost:5173/` - access website  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Screenshots
+<img src="https://i.imgur.com/qvtVWWT.png" alt="Main section">
+<img src="https://i.imgur.com/M6ufVwX.png" alt="Equipment section">
+<img src="https://i.imgur.com/B2k98Dc.png" alt="Membership section">
+<img src="https://i.imgur.com/Hl32UPq.png" alt="Trainers section">
+<img src="https://i.imgur.com/u1XbXbL.png" alt="About section">
