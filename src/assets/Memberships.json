@@ -3,6 +3,7 @@
         {
             "title": "Flex",
             "price": "100,00",
+            "best": false,
             "specifications" : [
                 "Duração do plano: 12 meses",
                 "0 taxa de cancelamento",
@@ -10,18 +11,9 @@
             ]
         },
         {
-        "title": "Duo",
-        "price": "80,00",
-        "specifications" : [
-            "Duração do plano: 12 meses",
-            "0 taxa de cancelamento",
-            "Plano transferível",
-            "Preço válido para cada pessoa do plano duo"
-        ]
-        },
-        {
             "title": "Elite",
             "price": "120,00",
+            "best": true,
             "specifications" : [
                 "Duração do plano: 6 meses",
                 "0 taxa de cancelamento",
@@ -29,6 +21,17 @@
                 "Direito a personal trainer",
                 "Acesso a qualquer smartGym do país"
             ]
+        },
+        {
+        "title": "Duo",
+        "price": "80,00",
+        "best": false,
+        "specifications" : [
+            "Duração do plano: 12 meses",
+            "0 taxa de cancelamento",
+            "Plano transferível",
+            "Preço válido para cada pessoa do plano duo"
+        ]
         }
     ]
     
