@@ -7,15 +7,23 @@ import Membership from './components/Membership/Membership.jsx'
 import Trainers from './components/Trainers/Trainers.jsx'
 import Footer from './components/Footer/Footer.jsx'
 import About from './components/About/About.jsx'
+import Modal from './components/Modal/Modal.jsx'
 import './App.css'
  
 function App() {
-
+  
+  
+  const [isLoginOpen, setLoginOpen] = useState(false);
+  
+  const openLogin = () => setLoginOpen(true);
+  const closeLogin = () => setLoginOpen(false);
+  
 
   return (
     <>
     <div className='container'>
-      <Header />
+      <Header openLogin={openLogin}/>
+      <Modal isLoginOpen={isLoginOpen} closeLogin={closeLogin}></Modal>
       <MainPage />
       <Equipment />
       <Membership />

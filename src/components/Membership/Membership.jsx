@@ -5,8 +5,6 @@ import Card from './membership card/Card';
 
 export default function Membership() {
     const planos = Memberships.planos;
-    console.log(planos);
-    
     
     return (
     <div id='membership-container'> 
