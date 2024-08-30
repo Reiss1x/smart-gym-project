@@ -12,6 +12,10 @@ background: linear-gradient(0deg, rgb(8, 6, 20) 75%, rgba(0,0,0,0) 100%);
     position: relative
 }
 
+#footer-logo {
+    width: 10vw;
+}
+
 .footer h1 {
     font-size: 2.5vw;
     font-family: Arial;
@@ -23,7 +27,7 @@ background: linear-gradient(0deg, rgb(8, 6, 20) 75%, rgba(0,0,0,0) 100%);
     color: white;
     display: flex;
     font-weight: bold;
-    line-height: 30px;
+    line-height: 1.563vw;
     gap: 5vw;
     font-size: 1vw;
     font-family: Arial;

@@ -9,10 +9,9 @@
 
 #logo {
   width: 9.4vw;
-  height: 30px;
+  height: 1.563vw;
   margin-top: auto;
   margin-bottom: auto;
-  
 }
 
 #header-buttons {
@@ -21,7 +20,7 @@
 
 .h-buttons {
   font-family: var(--font-family);
-  font-size: 20px;
+  font-size: 1.042vw;
   display: inline-block; 
   cursor: pointer;
   margin: 1.6vw 1vw; 
@@ -30,11 +29,12 @@
   text-decoration: none; 
   border: none; 
   transition: 0.3s ease;
+  line-height: normal;
 }
 
 .h-buttons:last-child {
-  border-radius: 30px;
-  padding: 5px 15px 5px;
+  border-radius: 1.563vw;
+  padding: 0.26vw 0.781vw 0.26vw;
   margin-right: 0;
   background-color: var(--light-green);
 }
@@ -48,27 +48,4 @@
 }
 
 
-@media (max-width: 425px) {
-  .h-buttons {
-    font-size: 7px;
-  }
-}
-
-@media (min-width: 426px) and (max-width: 768px) {
-  .h-buttons {
-    font-size: 11px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1440px){
-  .h-buttons {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1441px) {
-  .h-buttons {
-    font-size: 25px;
-  }
-}
 

@@ -18,7 +18,7 @@ export default function Modal({isLoginOpen, closeLogin}) {
       borderRadius: "1.5%",
       padding: "4%",
       margin: "auto",
-      boxShadow: "0 0 20px rgba(0, 0, 0, 1)",
+      boxShadow: "0 0 1.042vw rgba(0, 0, 0, 1)",
       border: "0.30vw solid #78A083",
     
     },

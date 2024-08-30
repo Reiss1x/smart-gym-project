@@ -46,13 +46,13 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  padding-right: 8px;
+  padding-right: 0.417vw;
 }
 
 #planos {
   margin-bottom: 0.5vw;
   padding: 0.7em 5em;
-  border-radius: 60px;
+  border-radius: 3.125vw;
   border: transparent;
   background-color: var(--light-green);
   color: white;
@@ -69,7 +69,7 @@
 }
 
 #planos:active { 
-  transform: translateY(1px); 
+  transform: translateY(0.052vw); 
 } 
 
 #arrow-container {
@@ -88,14 +88,4 @@
 br {
   margin: 0;
   padding: 0;
-}
-
-
-@media (max-width: 1024px) {
-  #img-area {
-    padding-top: 10px;
-  }
-  #img-area-text {
-    padding-top: 10px;
-  }
 }

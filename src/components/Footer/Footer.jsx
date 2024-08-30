@@ -17,7 +17,7 @@ export default function Footer() {
     <div id="footer-container">
         <div className='footer'>
             <div className='logo-text'>
-                <img src={Logo}/>
+                <img src={Logo} id='footer-logo'/>
                 <h1>Descubra o poder de<br />um <span className='green'>corpo saudável</span>.</h1>
             </div>
             

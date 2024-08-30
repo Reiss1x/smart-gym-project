@@ -62,7 +62,7 @@
     padding: 0.8vw;
     background-color: var(--light-green);
     border: 0;
-    border-radius: 60px;
+    border-radius: 3.125vw;
     color: white;
     font-family: var(--font-family);
     font-size: 1vw;
@@ -72,8 +72,8 @@
     margin: auto;
     position: absolute;
     bottom: 0;
-    margin-left: 100px;
-    margin-bottom: 30px;
+    margin-left: 5.208vw;
+    margin-bottom: 1.563vw;
 }
 
 #phone {

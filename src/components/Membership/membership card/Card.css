@@ -43,7 +43,7 @@ hr {
 }
 
 #checkmark {
-    margin-right: 10px;
+    margin-right: 0.521vw;
     width: 2vw;
     height: 100%;
 }
@@ -52,8 +52,8 @@ hr {
     margin-top: 1.6vw;
     padding: 0.8vw;
     background-color: transparent;
-    border: 3px solid var(--light-green);
-    border-radius: 60px;
+    border: 0.156vw solid var(--light-green);
+    border-radius: 3.125vw;
     color: white;
     font-family: var(--font-family);
     font-size: 1.3vw;
