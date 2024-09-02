@@ -41,6 +41,7 @@ p2 {
     font-size: 0.8vw;
     padding-top: 0.5vw;
     opacity: 63%;
+
 }
 p3 {
 
@@ -64,8 +65,8 @@ p3 {
 	align-items: baseline;
 	position: relative;
 	max-width: 100%;
-    padding-top: 2vw;
     height: 74.5%;
+    padding-top: 1vw;
 }
 
 .modal-input {
@@ -99,8 +100,8 @@ p3 {
     bottom: 0;
     width: 80%;
 	background: linear-gradient(to right, #78A083, #2B3C46);
-	border-radius: 5px;
-    box-shadow: 0px 0px 3px 0px black;
+	border-radius: 0.26vw;
+    box-shadow: 0px 0px 0.156vw 0px black;
     border: 0px solid transparent;
 	color:#ffffff;
 	font-size:0.8vw;
@@ -111,4 +112,37 @@ p3 {
 }
 .modal-button:active {
 	background: linear-gradient(to right, #668870, #223038);
+}
+
+.error-message {
+    opacity: 0;
+    background-color: #FFEBE9;
+    border: 0.104vw solid #FFC1C0;
+    width: 80%;
+    padding: 0.3vw 0.8vw;
+    border-radius: 0.26vw;
+    margin-bottom: 1vw;
+
+}
+
+.error-message-active img {
+    width: 5%;
+    height: 100%;
+}
+
+.error-message-active {
+    font-size: 0.7vw;
+    margin-bottom: 1vw;
+    font-family: Arial;
+    font-style: normal;
+    opacity: 1;
+    transition: opacity 0.05s ease-in;
+    background-color: #FFEBE9;
+    border: 0.104vw solid #FFC1C0;
+    width: 80%;
+    padding: 0.3vw 0.8vw;
+    border-radius: 0.26vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
