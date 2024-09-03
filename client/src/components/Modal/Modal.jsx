@@ -22,11 +22,12 @@ export default function Modal({isLoginOpen, closeLogin}) {
     const [fetchingUser, setFetchingUser] = useState(false);
     const [fetchingReg, setFetchingReg] = useState(false);
 
-    const resetErroros = () => {
+    const resetErrors = () => {
         setFetchingReg(false);
         setRegErrorCode('');
         setRegErrorMessage('');
         setErrorMessage('');
+        setFetchingUser(false);
     }
 
     const register = () => {
@@ -38,7 +39,7 @@ export default function Modal({isLoginOpen, closeLogin}) {
         active: false,
       }).then((response) => {
         console.log(response);
-        resetErroros();
+        resetErrors();
       }).catch((error) => {
         setFetchingReg(false);
         setRegErrorCode(error.response.data.code)
@@ -55,7 +56,7 @@ export default function Modal({isLoginOpen, closeLogin}) {
         password: passwordLog
       }).then((response) => {
         console.log(response);
-        resetErroros(); 
+        resetErrors(); 
       }).catch(function (error) {
         if (error.response) {
           setFetchingUser(false);
