@@ -26,7 +26,7 @@
     width: 10vw;
 }
 
-p1 {
+#p1 {
   color: white;
   font-family: Arial;
   font-style: normal;
@@ -34,7 +34,7 @@ p1 {
   padding-top: 0.5vw;
 }
 
-p2 {
+#p2 {
     color: rgb(255, 255, 255);
     font-family: Arial;
     font-style: normal;
@@ -43,7 +43,7 @@ p2 {
     opacity: 63%;
 
 }
-p3 {
+#p3 {
 
     color: white;
     font-family: Arial;
@@ -83,6 +83,21 @@ p3 {
     margin-bottom: 0.4vw;
     margin-top: 0.4vw;
 }
+.modal-input-error {
+	font-size: 0.8vw;
+	padding: 0.6vw 0.8vw;
+	width: 80%;
+	outline: none;
+	background: #FFEBE9;
+	color: #000000;
+	border: 0.104vw solid #FFC1C0;
+	border-radius: 0.26vw;
+	box-shadow: 0px 0px 0.104vw 0.052vw #000000;
+	transition: .3s ease;
+    margin-bottom: 0.4vw;
+    margin-top: 0.4vw;
+}
+
 
 .modal-input:focus {
 	background: #ffffff18;
@@ -110,6 +125,23 @@ p3 {
     bottom: 0;
     left: 0; 
 }
+.modal-button-fetching {
+    bottom: 0;
+    width: 80%;
+	background: linear-gradient(to right, #9ac9a7, #5b7f94);
+	border-radius: 0.26vw;
+    box-shadow: 0px 0px 0.156vw 0px black;
+    border: 0px solid transparent;
+	color:#ffffff;
+	font-size:0.8vw;
+	padding: 0.6vw 0.8vw;
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+}
+
+
+
 .modal-button:active {
 	background: linear-gradient(to right, #668870, #223038);
 }

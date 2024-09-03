@@ -12,13 +12,25 @@ export default function Modal({isLoginOpen, closeLogin}) {
     const [passwordLog, setPasswordLog] = useState('');
 
     const [errorMessage, setErrorMessage] = useState('');
+    const [regErrorCode, setRegErrorCode] = useState('');
+    const [regErrorMessage, setRegErrorMessage] = useState('');
 
     const [usernameReg, setUsernameReg] = useState('');
     const [emailReg, setEmailReg] = useState('');
     const [passwordReg, setPasswordReg] = useState('');
 
+    const [fetchingUser, setFetchingUser] = useState(false);
+    const [fetchingReg, setFetchingReg] = useState(false);
+
+    const resetErroros = () => {
+        setFetchingReg(false);
+        setRegErrorCode('');
+        setRegErrorMessage('');
+        setErrorMessage('');
+    }
+
     const register = () => {
-      console.log("cadastro");
+      setFetchingReg(true);
       Axios.post('http://localhost:3000/user', {
         name: usernameReg,
         email: emailReg,
@@ -26,22 +38,32 @@ export default function Modal({isLoginOpen, closeLogin}) {
         active: false,
       }).then((response) => {
         console.log(response);
+        resetErroros();
+      }).catch((error) => {
+        setFetchingReg(false);
+        setRegErrorCode(error.response.data.code)
+        setRegErrorMessage(error.response.data.message);
+        console.log(error.response);
+        setErrorMessage('');
       })
     }
 
     const login = () => {
-      console.log("login");
+      setFetchingUser(true);
       Axios.post('http://localhost:3000/login', {
         email: emailLog,
         password: passwordLog
       }).then((response) => {
         console.log(response);
-        
+        resetErroros(); 
       }).catch(function (error) {
         if (error.response) {
+          setFetchingUser(false);
           setErrorMessage(error.response.data.message);
           console.log(errorMessage);
-        }
+          setRegErrorCode('');
+          setRegErrorMessage('');
+        }   
       })
     }
 
@@ -82,15 +104,15 @@ export default function Modal({isLoginOpen, closeLogin}) {
               <div className='signin-section'>
                 
                 <img src={smartGym} alt="Logo" id='modal-logo'></img>
-                <p1>Bem vindo de volta!</p1>
-                <p2>Insira seus dados</p2>            
-                <div class="modal-form">
+                <p id='p1'>Bem vindo de volta!</p>
+                <p id='p2'>Insira seus dados</p>            
+                <div className="modal-form">
                     
-                    <p3>E-mail</p3>
+                    <p id='p3'>E-mail</p>
                     <input className="modal-input" type="text" placeholder="Insira seu E-mail" onChange={(e) => {
                       setEmailLog(e.target.value);
                     }}/>
-                    <p3>Senha</p3>
+                    <p id='p3'>Senha</p>
                     <input className="modal-input" type="text" placeholder="Insira sua senha" onChange={(e) => {
                       setPasswordLog(e.target.value);
                     }}/>
@@ -99,30 +121,30 @@ export default function Modal({isLoginOpen, closeLogin}) {
                       <img src={x}></img>
                     </div>
                     
-                    <button className='modal-button' onClick={login}>Entrar</button>
+                    <button className={`modal-button${fetchingUser ? '-fetching' : ''}`} onClick={login} >{fetchingUser ? 'Entrando...' : 'Entrar' }</button>
                 </div>
               </div>
 
               <div id='barrinha'></div>
 
               <div className='signup-section' >
-                <p1>Pronto para mudar de vida?</p1>
-                <p2>Crie sua conta</p2>
-                <div class="modal-form" style={{height: '80%'}}>
-                    <p3>Nome Completo</p3>
+                <p id='p1'>Pronto para mudar de vida?</p>
+                <p id='p2'>Crie sua conta</p>
+                <div className="modal-form" style={{height: '80%'}}>
+                    <p id='p3'>Nome Completo</p>
                     <input className="modal-input" type="text" placeholder="Insira seu nome completo" style={{width: '100%'}} onChange={(e) => {
                       setUsernameReg(e.target.value);
                     }}/>
-                    <p3>E-mail</p3>
-                    <input className="modal-input" type="text" placeholder="Insira seu E-mail" style={{width: '100%'}} onChange={(e) => {
+                    <p id='p3'>E-mail</p>
+                    <input className={`modal-input${regErrorCode == 'email' ? '-error' : ''}`} type="text" placeholder="Insira seu E-mail" style={{width: '100%'}} onChange={(e) => {
                       setEmailReg(e.target.value);
                     }}/>
-                    <p3>Senha</p3>
-                    <input className="modal-input" type="text" placeholder="Crie uma senha" style={{width: '100%'}} onChange={(e) => {
+                    <p id='p3'>Senha</p>
+                    <input className={`modal-input${regErrorCode == 'pass' ? '-error' : ''}`} type="text" placeholder="Crie uma senha" style={{width: '100%'}} onChange={(e) => {
                       setPasswordReg(e.target.value);
                     }}/>
-                    <span id='password-subtext'>Deve conter pelo menos 8 caracteres</span>
-                    <button className='modal-button' style={{width: '100%'}} onClick={register}>Cadastrar</button>
+                    <span id='password-subtext'>{regErrorMessage}</span>
+                    <button className={`modal-button${fetchingReg ? '-fetching' : ''}`} style={{width: '100%'}} onClick={register}>{fetchingReg ? 'Cadastrando...' : 'Cadastrar'}</button>
                 </div>
               </div>
             </Modals>
