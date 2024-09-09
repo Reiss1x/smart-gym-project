@@ -1,9 +1,38 @@
-import e, {Request, Response} from "express";
+import {Request, Response} from "express";
 import { UserRepository } from "../repositories/UserRepository";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken'
-
 export class UserController {
+    async getProfile(req: Request, res: Response) {
+        return res.status(200).json({auth: true, message:"User is authenticated"})
+    }
+    
+    
+    async getLoggedIn(req: Request, res: Response) {
+        if (req.session.user) return res.status(200).json({loggedIn: true, user: req.session.user});
+        return res.status(200).json({loggedIn: false, message: 'User not logged in'});
+    }
+
+    async verifyJwt(req: Request, res: Response) {
+        const bearer  = req.headers.authorization;
+   
+        if (!bearer) {
+            console.log("erro");
+            return res.status(401)  
+        } 
+        
+        const token = bearer.split(' ')[1];
+
+        jwt.verify(token, process.env.JWT_PASS || '', (err, decoded) => {
+            
+            if(err) {
+            return res.status(400).json({auth: false, message: "User not authenticated"})
+        }
+        
+        return res.status(200).json({auth: true, message:"User is authenticated"})
+        })
+    }
+    
     async create(req: Request, res: Response){
         try {
             const passRegex: RegExp = /^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/
@@ -43,7 +72,6 @@ export class UserController {
     async get(req: Request, res: Response){
         const { email, password } = req.body
         const user = await UserRepository.findOneBy({email})
-        
         try {
 
             if(!user) {
@@ -57,11 +85,18 @@ export class UserController {
             }
 
             const token = jwt.sign({id: user.id}, process.env.JWT_PASS ?? '', {
-                expiresIn: '1h'
+                expiresIn: 300
             })
 
             const {password: _, ...userRes} = user
-
+            
+            res.cookie('access-token', token, {
+                httpOnly: true,
+                secure: true,
+                sameSite: 'strict',
+                maxAge: 60 * 60 * 24 * 30 * 1000
+            });
+            
             return res.json({
                 user: userRes,
                 token: token,
