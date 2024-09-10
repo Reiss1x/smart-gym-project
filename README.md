@@ -3,6 +3,13 @@
 Fictional gym ui design, made with ReactJS  
 WIP, will implement full website in the future
 
+## Roadmap
+
+ * [ ] User area
+ * [ ] Admin Area / dashboard
+ * [ ] Improve responsiveness
+ * [ ] Deployment
+
 ## How to run
 You can run the project locally to check the responsiveness and button actions:  
 `https://github.com/Reiss1x/smart-gym-project.git` - clone this repository  
