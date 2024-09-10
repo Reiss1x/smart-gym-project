@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Modals from 'react-modal';
 import './Modal.css'
 import smartGym from "../../assets/logo.svg";
 import x from "../../assets/x.svg";
 import Axios from 'axios';
-export default function Modal({isLoginOpen, closeLogin}) {
+export default function Modal({isLoginOpen, closeLogin, logUser}) {
     
+    Axios.defaults.withCredentials = true;
+
     Modals.setAppElement('#root');
 
     const [emailLog, setEmailLog] = useState('');
@@ -22,6 +24,13 @@ export default function Modal({isLoginOpen, closeLogin}) {
     const [fetchingUser, setFetchingUser] = useState(false);
     const [fetchingReg, setFetchingReg] = useState(false);
 
+    const [loggedUser, setLoggedUser] = useState(false);
+
+    const logUserModal = () => {
+     logUser()
+     setLoggedUser(true);
+    }
+
     const resetErrors = () => {
         setFetchingReg(false);
         setRegErrorCode('');
@@ -32,7 +41,7 @@ export default function Modal({isLoginOpen, closeLogin}) {
 
     const register = () => {
       setFetchingReg(true);
-      Axios.post('http://localhost:3000/user', {
+      Axios.post('http://localhost:3000/register', {
         name: usernameReg,
         email: emailReg,
         password: passwordReg,
@@ -55,9 +64,12 @@ export default function Modal({isLoginOpen, closeLogin}) {
         email: emailLog,
         password: passwordLog
       }).then((response) => {
-        console.log(response);
+        logUserModal();
         resetErrors(); 
-      }).catch(function (error) {
+        closeLogin();
+        console.log(response);    
+        
+      }).catch((error) => {
         if (error.response) {
           setFetchingUser(false);
           setErrorMessage(error.response.data.message);
@@ -68,9 +80,37 @@ export default function Modal({isLoginOpen, closeLogin}) {
       })
     }
 
-    const handleModalClose = () => {
+     const handleModalClose = () => {
       setErrorMessage('');
       closeLogin();
+    }
+
+    useEffect(() => {
+      const fetchUser = () => {
+        Axios.get('http://localhost:3000/profile').then((response) => {
+        if (response.data.auth) logUser();
+        
+        console.log(response);
+        
+        }).catch((err) => {
+
+        })
+      }
+      
+      fetchUser();
+    }, []);
+
+    const verify = async () => {
+      if(loggedUser){
+        await Axios.get('http://localhost:3000/profile', {
+      }).then((response) => {
+        console.log(response);
+
+      }).catch((err => {
+        console.log(err); 
+      }));
+      }
+      
     }
     
     const modalStyle = {
@@ -113,8 +153,9 @@ export default function Modal({isLoginOpen, closeLogin}) {
                     <input className="modal-input" type="text" placeholder="Insira seu E-mail" onChange={(e) => {
                       setEmailLog(e.target.value);
                     }}/>
+                    <button onClick={verify}>  asd  </button>
                     <p id='p3'>Senha</p>
-                    <input className="modal-input" type="text" placeholder="Insira sua senha" onChange={(e) => {
+                    <input className="modal-input" type="password" placeholder="Insira sua senha" onChange={(e) => {
                       setPasswordLog(e.target.value);
                     }}/>
                     <div className={`error-message${errorMessage ? '-active' : ''}`}>
@@ -123,6 +164,7 @@ export default function Modal({isLoginOpen, closeLogin}) {
                     </div>
                     
                     <button className={`modal-button${fetchingUser ? '-fetching' : ''}`} onClick={login} >{fetchingUser ? 'Entrando...' : 'Entrar' }</button>
+                     
                 </div>
               </div>
 
@@ -141,7 +183,7 @@ export default function Modal({isLoginOpen, closeLogin}) {
                       setEmailReg(e.target.value);
                     }}/>
                     <p id='p3'>Senha</p>
-                    <input className={`modal-input${regErrorCode == 'pass' ? '-error' : ''}`} type="text" placeholder="Crie uma senha" style={{width: '100%'}} onChange={(e) => {
+                    <input className={`modal-input${regErrorCode == 'pass' ? '-error' : ''}`} type="password" placeholder="Crie uma senha" style={{width: '100%'}} onChange={(e) => {
                       setPasswordReg(e.target.value);
                     }}/>
                     <span id='password-subtext'>{regErrorMessage}</span>

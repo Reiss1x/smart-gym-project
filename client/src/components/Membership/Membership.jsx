@@ -3,7 +3,7 @@ import './Membership.css';
 import Memberships from '../../assets/Memberships.json';
 import Card from './membership card/Card';
 
-export default function Membership() {
+export default function Membership({userLogged, openLogin}) {
     const planos = Memberships.planos;
     
     return (
@@ -16,7 +16,7 @@ export default function Membership() {
         
         <div className='container-cards'>
             {planos.map((plano, index) => (
-                <Card data={plano} className="individual-cards" key={index}></Card> 
+                <Card data={plano} className="individual-cards" key={index} userLogged={userLogged} openLogin={openLogin}></Card> 
             ))}
         </div>
     </div>

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Header.css"
 import smartGym from "../../assets/logo.svg";
 
-export default function Header({openLogin}) {
+export default function Header({openLogin, userLogged}) {
 
   const handleClick = (section) => {
     const element = document.getElementById(section);
@@ -13,7 +13,7 @@ export default function Header({openLogin}) {
   }
 
   const handleLogin = () => {
-    openLogin();
+    userLogged ? console.log('TODO') : openLogin();
   }
 
   return (
@@ -26,7 +26,7 @@ export default function Header({openLogin}) {
             <button className='h-buttons' onClick={() => handleClick("trainers-container")}> Treinadores </button>
             <button className='h-buttons' onClick={() => handleClick("about-container")}> Sobre </button>
             <button className='h-buttons' onClick={() => handleClick("footer-container")}> Contato </button>
-            <button className='h-buttons' onClick={() => handleLogin()}> Login </button>
+            <button className='h-buttons' onClick={() => handleLogin()}> {userLogged ? 'Minha conta' : 'Login' } </button>
           </div>
       </div>
     </div>

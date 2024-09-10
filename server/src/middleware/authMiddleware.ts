@@ -7,8 +7,10 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
    
         const cookie = req.headers.cookie;
         if (req.headers.cookie) {
-            const token = cookie?.split('=')[1]
-            console.log(token);
+            const token = cookie?.split('; ')
+                .find(cookie => cookie.startsWith('access-token='))
+                ?.split('=')[1]
+            
             
             if (!token) {
                 return res.status(400).json({auth: false, message: "User not authenticated"})

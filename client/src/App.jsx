@@ -14,19 +14,20 @@ function App() {
   
   
   const [isLoginOpen, setLoginOpen] = useState(false);
-  
+  const [userLogged, setUserLogged] = useState(false);
+
   const openLogin = () => setLoginOpen(true);
   const closeLogin = () => setLoginOpen(false);
-  
+  const logUser = () => setUserLogged(true);
 
   return (
     <>
     <div className='container'>
-      <Header openLogin={openLogin}/>
-      <Modal isLoginOpen={isLoginOpen} closeLogin={closeLogin}></Modal>
+      <Header openLogin={openLogin} userLogged={userLogged}/>
+      <Modal isLoginOpen={isLoginOpen} closeLogin={closeLogin} logUser={logUser}> </Modal>
       <MainPage />
       <Equipment />
-      <Membership />
+      <Membership userLogged={userLogged} openLogin={openLogin} />
       <Trainers />
       <About />
       <Footer />
