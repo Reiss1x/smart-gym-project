@@ -11,7 +11,7 @@ WIP, will implement full website in the future
  * [ ] Deployment
 
 ## How to run
-You can run the project locally to check the responsiveness and button actions:  
+For now, you can run the project locally folowing these steps:  
 `https://github.com/Reiss1x/smart-gym-project.git` - clone this repository  
 `npm install` - install dependencies  
 `npm run dev` - run project   
