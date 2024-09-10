@@ -1,7 +1,9 @@
-# SmartGym UI
+# SmartGym
 
-Fictional gym ui design, made with ReactJS  
-WIP, will implement full website in the future
+Fictional gym full stack web aplication, made with ReactJS, Node TypeScript and Figma.    
+All designs were made and implemented by me.  
+You can check the figma project and inspirations here:  
+https://www.figma.com/design/ZLLZt1OxLY9corDRK5dHFC/smartGym?node-id=0-1&t=O90weacnQ4U7oWG1-1
 
 ## Roadmap
 
