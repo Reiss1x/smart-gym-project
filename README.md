@@ -6,7 +6,8 @@ You can check the figma project and inspirations here:
 https://www.figma.com/design/ZLLZt1OxLY9corDRK5dHFC/smartGym?node-id=0-1&t=O90weacnQ4U7oWG1-1
 
 ## Roadmap
-
+ * [X] Main page UI
+ * [X] User Authentication/Authorization
  * [ ] User area
  * [ ] Admin Area / dashboard
  * [ ] Improve responsiveness
