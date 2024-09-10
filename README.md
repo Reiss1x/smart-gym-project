@@ -15,9 +15,11 @@ https://www.figma.com/design/ZLLZt1OxLY9corDRK5dHFC/smartGym?node-id=0-1&t=O90we
 
 ## How to run
 For now, you can run the project locally folowing these steps:  
-`https://github.com/Reiss1x/smart-gym-project.git` - clone this repository  
-`npm install` - install dependencies  
-`npm run dev` - run project   
+`https://github.com/Reiss1x/smart-gym-project.git` - clone this repository
+`cd client` - access directory
+`npm install npm run dev` - install dependencies and run project
+`cd .. cd server` access backend directory
+`npm install npm run dev` install dependencies and run project
 `http://localhost:5173/` - access website  
 
 # Screenshots
