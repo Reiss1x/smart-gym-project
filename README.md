@@ -10,7 +10,7 @@ https://www.figma.com/design/ZLLZt1OxLY9corDRK5dHFC/smartGym?node-id=0-1&t=O90we
  * [ ] User area
  * [ ] Admin Area / dashboard
  * [ ] Improve responsiveness
- * [ ] Deployment
+ * [ ] Cloud deployment
 
 ## How to run
 For now, you can run the project locally folowing these steps:  
