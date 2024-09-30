@@ -1,15 +1,8 @@
 import { useState } from 'react'
-
-import Header from './components/Header/Header.jsx'
-import MainPage from './components/MainPage/MainPage.jsx'
-import Equipment from './components/Equipment/Equipment.jsx'
-import Membership from './components/Membership/Membership.jsx'
-import Trainers from './components/Trainers/Trainers.jsx'
-import Footer from './components/Footer/Footer.jsx'
-import About from './components/About/About.jsx'
-import Modal from './components/Modal/Modal.jsx'
 import './App.css'
- 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './components/Home/Home.jsx'
+
 function App() {
   
   
@@ -21,19 +14,14 @@ function App() {
   const logUser = () => setUserLogged(true);
 
   return (
-    <>
-    <div className='container'>
-      <Header openLogin={openLogin} userLogged={userLogged}/>
-      <Modal isLoginOpen={isLoginOpen} closeLogin={closeLogin} logUser={logUser}> </Modal>
-      <MainPage />
-      <Equipment />
-      <Membership userLogged={userLogged} openLogin={openLogin} />
-      <Trainers />
-      <About />
-      <Footer />
-    </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home openLogin={openLogin} userLogged={userLogged} logUser={logUser} isLoginOpen={isLoginOpen} closeLogin={closeLogin}/>}></Route>
+        
+      </Routes>
+    </Router>
   )
 }
 
 export default App
+//<Route path="/profile" element={<Profile />}></Route>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import "./Header.css"
 import smartGym from "../../assets/logo.svg";
+import Axios from 'axios';
 
 export default function Header({openLogin, userLogged}) {
 
@@ -13,7 +14,14 @@ export default function Header({openLogin, userLogged}) {
   }
 
   const handleLogin = () => {
-    userLogged ? console.log('TODO') : openLogin();
+    userLogged ? Axios.get('http://localhost:3000/profile').then((response) => {
+        if (response.data.auth){}
+        
+        console.log(response);
+        
+        }).catch((err) => {
+
+        }) : openLogin();
   }
 
   return (
