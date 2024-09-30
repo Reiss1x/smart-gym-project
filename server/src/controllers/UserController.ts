@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken'
 export class UserController {
     
     async getProfile(req: Request, res: Response) {
-        return res.status(200).json({auth: true, message:"User is authenticated"})
+        return res.redirect(`/${res.locals.userId}/profile`);
     }
 
     
@@ -51,13 +51,13 @@ export class UserController {
         try {
 
             if(!user) {
-                return res.status(500).json({message: "E-mail ou senha inválido."})
+                return res.status(400).json({message: "E-mail ou senha inválido."})
             }
 
             const check = await bcrypt.compare(password, user.password);
 
             if (!check){
-                return res.status(500).json({message: "E-mail ou senha inválido."})
+                return res.status(400).json({message: "E-mail ou senha inválido."})
             }
 
             const token = jwt.sign({id: user.id}, process.env.JWT_PASS ?? '', {
